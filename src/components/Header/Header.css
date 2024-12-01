@@ -1,0 +1,56 @@
+/* Estilo general para el encabezado */
+.header {
+  background: linear-gradient(135deg, #003f6b, #006994); /* Gradiente dinámico entre azules */
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  animation: fadeIn 1s ease-out; /* Animación de aparición */
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-title {
+  font-size: 48px;
+  font-weight: 900; /* Negrita más pronunciada */
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra de texto sutil */
+}
+
+.header-description {
+  font-size: 20px;
+  color: #b1c6d5; /* Gris claro */
+  margin-top: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header a:hover {
+  color: #ff7f50; /* Naranja brillante para el hover */
+  text-decoration: underline; /* Subrayado en hover */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

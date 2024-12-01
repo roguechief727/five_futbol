@@ -1,0 +1,99 @@
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 110px;
+  background-color: #f2f2f2;
+}
+
+.admin-title {
+  font-size: 30px;
+  color: #003f6b; /* Azul de la paleta */
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.admin-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.option-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 280px;
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option-title {
+  font-size: 20px;
+  color: #003f6b; /* Azul oscuro */
+  margin-bottom: 10px;
+}
+
+.option-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.option-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #0056b3;
+}
+
+.logout-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.logout-button {
+  background-color: #e63946; /* Rojo para el botón de salir */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #d62828; /* Rojo más oscuro en el hover */
+}
+
+
+@media (max-width: 768px) {
+  .admin-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-card {
+    width: 90%;
+  }
+}

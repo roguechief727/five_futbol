@@ -1,0 +1,65 @@
+/* Estilos generales para la página de Player */
+.player-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Contenedor principal para los contenidos de Player */
+.player-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título de la página */
+.player-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Contenedor para las opciones del jugador */
+.player-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Estilo para cada opción de jugador */
+.player-option {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Estilo para los botones de opciones */
+.option-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.option-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos de las opciones cuando están en hover */
+.option-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+}

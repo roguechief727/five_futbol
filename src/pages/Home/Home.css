@@ -1,4 +1,94 @@
-.home {
+/* Estilos globales para la página Home */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0066b3; /* Azul claro, inspirado en la UEFA Champions League */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Texto en blanco para contrastar con el fondo azul */
+    min-height: 100vh;
+    padding: 0 20px;
+  }
+  
+  /* Encabezado principal con azul más oscuro */
+  .home-header {
     text-align: center;
-    margin: 20px;
-}
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #003d73; /* Azul oscuro para el encabezado */
+    color: #fff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .home-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .home-header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Botones de acción */
+  .cta-button {
+    background-color: #ff9f00; /* Naranja brillante para los botones */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .cta-button:hover {
+    background-color: #e68900; /* Naranja oscuro al pasar el mouse */
+  }
+  
+  .cta-button.secondary {
+    background-color: #ff9f00; /* Naranja para el botón de registro */
+  }
+  
+  .cta-button.secondary:hover {
+    background-color: #e68900; /* Naranja oscuro */
+  }
+  
+  /* Sección 'Sobre FiveFutbol' */
+  .home-about {
+    text-align: center;
+    max-width: 800px;
+    margin-top: 30px;
+  }
+  
+  .home-about h2 {
+    font-size: 2rem;
+    color: #fff; /* Blanco para los títulos */
+  }
+  
+  .home-about p {
+    font-size: 1.1rem;
+    color: #f4f4f9; /* Texto claro para contraste */
+    line-height: 1.6;
+  }
+  
+  /* Imagen de fondo */
+  .home-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .home-image img {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  

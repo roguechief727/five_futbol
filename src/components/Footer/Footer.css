@@ -1,0 +1,85 @@
+/* Estilos generales del Footer */
+.footer {
+    background-color: #003f6b; /* Azul oscuro de la paleta */
+    color: #ffffff;
+    padding: 20px 20px; /* Reducir el padding para hacerlo más compacto */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px; /* Reducir el espacio entre las secciones */
+  }
+  
+  .footer-left, .footer-right {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .footer-title {
+    font-size: 22px; /* Reducir el tamaño del título */
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px; /* Reducir el espacio debajo del título */
+  }
+  
+  .footer-description {
+    font-size: 14px;
+    color: #b0c4de; /* Color gris claro */
+  }
+  
+  .footer-heading {
+    font-size: 16px; /* Reducir el tamaño del encabezado */
+    color: #ffffff;
+    margin-bottom: 8px; /* Reducir el espacio debajo del encabezado */
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin: 5px 0; /* Reducir el espacio entre los enlaces */
+  }
+  
+  .footer-links a {
+    color: #66b3ff; /* Azul brillante */
+    text-decoration: none;
+    font-size: 14px; /* Reducir el tamaño de los enlaces */
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+  }
+  
+  .footer-bottom {
+    background-color: #002e46; /* Azul más oscuro para la parte inferior */
+    padding: 8px 0; /* Reducir el padding */
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+    color: #b0c4de; /* Gris claro */
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-left, .footer-right {
+      padding: 5px;
+    }
+  }
+  

@@ -6,9 +6,8 @@ import Admin from '../pages/Admin/Admin';
 import Player from '../pages/Player/Player';
 import NotFound from '../pages/NotFound/NotFound';
 import { AuthContext } from '../contexts/AuthContext';
-import AdminLayout from '../layouts/AdminLayout';
-import PlayerLayout from '../layouts/PlayerLayout';
 import MainLayout from '../layouts/MainLayout';
+import Home from '../pages/Home/Home';
 
 const AppRoutes = () => {
   const { auth } = useContext(AuthContext);
@@ -21,6 +20,14 @@ const AppRoutes = () => {
             {/* Rutas públicas con MainLayout */}
             <Route
               path="/"
+              element={
+                <MainLayout>
+                  <Home />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/login"
               element={
                 <MainLayout>
                   <Login />
@@ -42,9 +49,9 @@ const AppRoutes = () => {
             <Route
               path="/admin"
               element={
-                <AdminLayout>
+                <MainLayout>
                   <Admin />
-                </AdminLayout>
+                </MainLayout>
               }
             />
           </>
@@ -54,9 +61,9 @@ const AppRoutes = () => {
             <Route
               path="/player"
               element={
-                <PlayerLayout>
+                <MainLayout>
                   <Player />
-                </PlayerLayout>
+                </MainLayout>
               }
             />
           </>

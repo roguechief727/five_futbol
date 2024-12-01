@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { login, register } from '../../services/authService';
+import { login, register } from '../../services/authServices';
 import './AuthForm.css';
 
 const AuthForm = ({ isLogin, onSuccess }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); // Agregado para manejar el estado de carga
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Iniciar carga
     try {
       if (isLogin) {
         const data = await login(username, password);
@@ -17,8 +19,14 @@ const AuthForm = ({ isLogin, onSuccess }) => {
         await register({ username, password });
         alert('Usuario registrado. Ahora puedes iniciar sesión.');
       }
+      setLoading(false); // Finalizar carga
     } catch (err) {
-      setError(err.response?.data?.message || 'Error desconocido');
+      setLoading(false); // Finalizar carga
+      if (isLogin) {
+        setError('Credenciales incorrectas. Intenta de nuevo.');
+      } else {
+        setError(err.response?.data?.message || 'Error desconocido');
+      }
     }
   };
 
@@ -26,21 +34,29 @@ const AuthForm = ({ isLogin, onSuccess }) => {
     <form className="auth-form" onSubmit={handleSubmit}>
       <h2>{isLogin ? 'Iniciar Sesión' : 'Crear Cuenta'}</h2>
       {error && <p className="error">{error}</p>}
-      <input
-        type="text"
-        placeholder="Usuario"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Contraseña"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">{isLogin ? 'Entrar' : 'Registrar'}</button>
+      <div className="input-container">
+        <input
+          type="text"
+          placeholder="Usuario"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+          className={error ? 'input-error' : ''}
+        />
+      </div>
+      <div className="input-container">
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          className={error ? 'input-error' : ''}
+        />
+      </div>
+      <button type="submit" disabled={loading} className="submit-button">
+        {loading ? 'Cargando...' : isLogin ? 'Entrar' : 'Registrar'}
+      </button>
     </form>
   );
 };
