@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
+import BackButton from '../../components/BackButton/BackButton';
 
 const Register = () => {
 
@@ -8,11 +9,6 @@ const Register = () => {
   const [form, setForm] = useState({ username: '', password: '', confirmPassword: '' });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
-
-   // Función para manejar la navegación hacia la pestaña anterior
-  const handleGoBack = () => {
-    navigate(-1); // Va a la página anterior en el historial
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,9 +34,7 @@ const Register = () => {
 
   return (
     <div className="register-page">
-      <button className="back-button" onClick={handleGoBack}>
-        &#8592; Volver
-      </button>
+      <BackButton />
       <form className="auth-form" onSubmit={handleSubmit}>
         <h2>Crear Cuenta</h2>
         {error && <p className="error">{error}</p>}

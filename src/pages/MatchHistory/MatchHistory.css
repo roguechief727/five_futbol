@@ -1,0 +1,142 @@
+/* Contenedor principal de la historia de los partidos */
+.match-history-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 30px;
+  background-color: #f7f9fc;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.match-history-title {
+  font-size: 2.8rem;
+  color: #2980b9;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.no-matches-message {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* Lista de partidos */
+.match-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.match-card {
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #2980b9;
+}
+
+.match-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.match-location {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2980b9;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, rgba(41, 128, 185, 1) 0%, rgba(44, 62, 80, 1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.match-date {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.match-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.team {
+  width: 45%;
+}
+
+.team h3 {
+  font-size: 1.7rem;
+  color: #34495e;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.team p {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los goles */
+.goals {
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  font-weight: bold;
+  color: #ffffff; /* Blanco brillante */
+  background: linear-gradient(90deg, rgba(46, 204, 113, 1) 0%, rgba(39, 174, 96, 1) 100%); /* Verde brillante con gradiente */
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(46, 204, 113, 0.5);
+  margin: 10px 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Añadido el efecto de fondo */
+}
+
+.goals:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+  box-shadow: 0 8px 18px rgba(46, 204, 113, 0.7);
+  background: linear-gradient(90deg, rgba(39, 174, 96, 1) 0%, rgba(46, 204, 113, 1) 100%); /* Efecto de hover con cambio de gradiente */
+}
+
+/* Lista de jugadores */
+.players {
+  list-style: none;
+  padding: 0;
+}
+
+.players li {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.infractions {
+  font-size: 1rem;
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .match-details {
+    flex-direction: column;
+  }
+
+  .team {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

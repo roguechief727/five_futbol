@@ -1,0 +1,50 @@
+/* Contenedor principal para el detalle del partido */
+.match-details-container {
+    position: relative; /* Asegura que el botón se posicione relativo a este contenedor */
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el botón de volver atrás */
+  .back-button {
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    top: 20px; /* Asegura que esté a 20px desde la parte superior */
+    left: 20px; /* Asegura que esté a 20px desde el lado izquierdo */
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .back-button:hover {
+    background-color: #1f6f8b;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-button:focus {
+    outline: none;
+  }
+  
+  .back-button svg {
+    margin-right: 10px;
+    font-size: 1.6rem;
+  }
+  
+  @media (max-width: 600px) {
+    .back-button {
+      font-size: 1.1rem;
+      padding: 8px 18px;
+    }
+  }
+  

@@ -7,25 +7,3 @@
   background-color: #f5f5f5;
   position: relative; /* Para asegurar que el botón se posicione correctamente */
 }
-
-/* Estilo para el botón de Volver */
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: transparent;
-  color: #007bff;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  font-weight: bold;
-  transition: color 0.3s;
-  z-index: 10; /* Aseguramos que se coloque sobre otros elementos */
-}
-
-.back-button:hover {
-  color: #0056b3; /* Cambio de color al pasar el mouse */
-}
-
-/* Los estilos del formulario de login ya están definidos en el archivo AuthForm.css */

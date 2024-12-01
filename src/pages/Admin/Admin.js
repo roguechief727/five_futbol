@@ -13,6 +13,10 @@ const Admin = () => {
     navigate('/');  // Redirigimos al inicio
   };
 
+  const handleHistoryClick = () => {
+    navigate('/admin/match-history'); // Redirige a la ruta /register
+};
+
   return (
     <div className="admin-page">
       <h2 className="admin-title">Panel de Administración</h2>
@@ -33,7 +37,7 @@ const Admin = () => {
         <div className="option-card">
           <h3 className="option-title">Historial de Partidos</h3>
           <p className="option-description">Consulta los registros de partidos pasados.</p>
-          <button className="option-button">Ver Historial</button>
+          <button className="option-button" onClick={ handleHistoryClick }>Ver Historial</button>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import Admin from '../pages/Admin/Admin';
@@ -10,6 +10,7 @@ import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home/Home'
 import ListaCalificacion from '../pages/ListaCalificacion/ListaCalificacion';
 import DetalleJugador from '../pages/ListaCalificacion/DetalleJugador';
+import MatchHistory from '../pages/MatchHistory/MatchHistory';
 
 const AppRoutes = () => {
   const { auth } = useContext(AuthContext);
@@ -53,6 +54,14 @@ const AppRoutes = () => {
               element={
                 <MainLayout>
                   <Admin />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/admin/match-history"
+              element={
+                <MainLayout>
+                  <MatchHistory />
                 </MainLayout>
               }
             />
