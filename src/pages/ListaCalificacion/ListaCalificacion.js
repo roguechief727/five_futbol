@@ -17,14 +17,19 @@ const ListaJugadores = () => {
 
   return (
     <div className="lista-jugadores-container">
-      <h1>Lista de Jugadores</h1>
-      <ul>
+      <h1 className="lista-jugadores-titulo">Lista de Jugadores</h1>
+      <ul className="lista-jugadores-lista">
         {jugadores.map((jugador) => (
-          <li key={jugador.id}>
-            <span>
-              {jugador.nombre} - {jugador.posicion} ({jugador.equipo})
+          <li key={jugador.id} className="lista-jugadores-item">
+            <span className="lista-jugadores-info">
+              {jugador.nombre} - {jugador.posicion} 
             </span>
-            <button onClick={() => handleVerDetalle(jugador.id)}>Ver Detalles</button>
+            <button 
+              className="lista-jugadores-boton" 
+              onClick={() => handleVerDetalle(jugador.id)}
+            >
+              Ver Detalles
+            </button>
           </li>
         ))}
       </ul>

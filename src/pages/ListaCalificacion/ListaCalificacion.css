@@ -1,58 +1,54 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  .lista-jugadores-container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    color: #555;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  li:last-child {
-    border-bottom: none;
-  }
-  
-  button {
-    padding: 10px 15px;
-    background: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s;
-  }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  
+.lista-jugadores-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lista-jugadores-titulo {
+  text-align: center;
+  color: #555;
+}
+
+.lista-jugadores-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-jugadores-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.lista-jugadores-item:last-child {
+  border-bottom: none;
+}
+
+.lista-jugadores-info {
+  font-size: 16px;
+  color: #333;
+}
+
+.lista-jugadores-boton {
+  padding: 10px 15px;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.lista-jugadores-boton:hover {
+  background: #0056b3;
+}
+
+.lista-jugadores-boton:focus {
+  outline: none;
+}

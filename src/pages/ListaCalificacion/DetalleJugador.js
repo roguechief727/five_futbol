@@ -13,9 +13,10 @@ const DetalleJugador = () => {
   const navigate = useNavigate();
   const jugador = jugadores.find((j) => j.id === parseInt(id));
   const [comentario, setComentario] = useState("");
+  const [mensajeValidado, setMensajeValidado] = useState("");
 
   if (!jugador) {
-    return <p>Jugador no encontrado.</p>;
+    return <p className="detalle-jugador-error">Jugador no encontrado.</p>;
   }
 
   const handleRegresar = () => {
@@ -26,21 +27,44 @@ const DetalleJugador = () => {
     setComentario(e.target.value);
   };
 
+  const validarMensaje = () => {
+    if (comentario.trim() === "") {
+      setMensajeValidado("El comentario no puede estar vacío.");
+    } else {
+      setMensajeValidado("Comentario validado correctamente.");
+    }
+  };
+
   return (
     <div className="detalle-jugador-container">
-      <h1>Detalles de {jugador.nombre}</h1>
-      <p><strong>Edad:</strong> {jugador.edad}</p>
-      <p><strong>Posición:</strong> {jugador.posicion}</p>
-      <p><strong>Equipo:</strong> {jugador.equipo}</p>
-      <p><strong>Goles:</strong> {jugador.goles}</p>
+      <h1 className="detalle-jugador-titulo">Detalles de {jugador.nombre}</h1>
+      <p className="detalle-jugador-info"><strong>Edad:</strong> {jugador.edad}</p>
+      <p className="detalle-jugador-info"><strong>Posición:</strong> {jugador.posicion}</p>
+      <p className="detalle-jugador-info"><strong>Equipo:</strong> {jugador.equipo}</p>
+      <p className="detalle-jugador-info"><strong>Goles:</strong> {jugador.goles}</p>
 
-      <h2>Comentarios</h2>
+      <h2 className="detalle-jugador-comentario-titulo">Comentarios</h2>
       <textarea 
+        className="detalle-jugador-comentario-textarea" 
         value={comentario} 
         onChange={handleComentarioChange} 
         placeholder="Escribe tu comentario aquí..."
       />
-      <button onClick={handleRegresar}>Regresar</button>
+      <div className="detalle-jugador-botones">
+        <button 
+          className="detalle-jugador-validar-boton" 
+          onClick={validarMensaje}
+        >
+          Validar Comentario
+        </button>
+        <button 
+          className="detalle-jugador-boton" 
+          onClick={handleRegresar}
+        >
+          Regresar
+        </button>
+      </div>
+      {mensajeValidado && <p className="detalle-jugador-mensaje-validado">{mensajeValidado}</p>}
     </div>
   );
 };
