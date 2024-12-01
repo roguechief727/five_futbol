@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Player.css';
 
 const Player = () => {
+  const navigate = useNavigate();
+
+  const Calificacion = () => {
+    navigate(`/jugadores`);
+  };
+
   return (
     <div className="player-page">
       <div className="player-container">
@@ -12,7 +19,7 @@ const Player = () => {
             <button className="option-button">Ver mis Partidos</button>
           </div>
           <div className="player-option">
-            <button className="option-button">Calificar un Jugador</button>
+            <button className="option-button" onClick={Calificacion}>Calificar un Jugador</button>
           </div>
           <div className="player-option">
             <button className="option-button">Revisar mis Críticas</button>

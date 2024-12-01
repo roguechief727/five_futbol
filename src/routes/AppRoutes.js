@@ -7,7 +7,9 @@ import Player from '../pages/Player/Player';
 import NotFound from '../pages/NotFound/NotFound';
 import { AuthContext } from '../contexts/AuthContext';
 import MainLayout from '../layouts/MainLayout';
-import Home from '../pages/Home/Home';
+import Home from '../pages/Home/Home'
+import ListaCalificacion from '../pages/ListaCalificacion/ListaCalificacion';
+import DetalleJugador from '../pages/ListaCalificacion/DetalleJugador';
 
 const AppRoutes = () => {
   const { auth } = useContext(AuthContext);
@@ -63,6 +65,22 @@ const AppRoutes = () => {
               element={
                 <MainLayout>
                   <Player />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/jugadores"
+              element={
+                <MainLayout>
+                  <ListaCalificacion />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/jugadores/:id"
+              element={
+                <MainLayout>
+                  <DetalleJugador />
                 </MainLayout>
               }
             />
