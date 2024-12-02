@@ -15,7 +15,11 @@ const Admin = () => {
 
   const handleHistoryClick = () => {
     navigate('/admin/match-history'); // Redirige a la ruta /register
-};
+  };
+
+  const handleCreateClick = () => {
+    navigate('/admin/matches'); // Redirige a la ruta /register
+  };
 
 const handleListClick = () => {
   navigate('/admin/lista-jugadores'); 
@@ -29,7 +33,7 @@ const handleListClick = () => {
         <div className="option-card">
           <h3 className="option-title">Gestionar Partidos</h3>
           <p className="option-description">Administra los partidos programados, edita y asigna jugadores.</p>
-          <button className="option-button">Gestionar</button>
+          <button className="option-button" onClick={ handleCreateClick }>Gestionar</button>
         </div>
 
         <div className="option-card">

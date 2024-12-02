@@ -1,0 +1,132 @@
+.create-match-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaciado entre los elementos */
+  position: relative;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 28px; /* Título más grande */
+  color: #0056b3; /* Color destacado */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Para hacerlo más prominente */
+  letter-spacing: 1px; /* Espaciado de las letras */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para el título */
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.players-title {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #444;
+  text-align: center;
+}
+
+.players-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.player-item {
+  display: flex;
+  flex-direction: column;  /* Coloca los elementos de arriba a abajo */
+  align-items: center;  /* Centra el contenido */
+  justify-content: center;  /* Centra el contenido verticalmente */
+  width: calc(33% - 10px);
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.player-item:hover {
+  transform: scale(1.05);
+  background-color: #f0f8ff;
+}
+
+.selected {
+  background-color: #cce5ff;
+  border-color: #0056b3;
+}
+
+.player-name {
+  font-size: 18px;  /* Aumenta un poco el tamaño del nombre */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px; /* Añade un pequeño margen debajo del nombre */
+}
+
+.player-rendimiento {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;  /* Espacio arriba del rendimiento */
+}
+
+.create-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create-btn:disabled {
+  background-color: #bbb;
+}
+
+.create-btn:hover:enabled {
+  background-color: #0056b3;
+}
+@media (max-width: 600px) {
+  .player-item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 400px) {
+  .player-item {
+    width: 100%;
+  }
+}

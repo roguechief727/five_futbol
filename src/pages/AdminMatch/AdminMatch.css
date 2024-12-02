@@ -1,0 +1,169 @@
+/* AdminMatch.css */
+
+.matches-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.matches-page h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.matches-page .create-match-btn {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.matches-page .create-match-btn:hover {
+  background-color: #0056b3;
+}
+
+.matches-page .create-match-btn:focus {
+  outline: none;
+}
+
+.matches-page .match-item {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.matches-page .match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.matches-page .match-details p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #666;
+}
+
+.matches-page .teams-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.matches-page .team {
+  width: 48%;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.matches-page .team-name-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.matches-page .team-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+
+/* AdminMatch.css */
+
+/* Contenedor de la lista de jugadores */
+.matches-page .team-players {
+  margin-top: 8px;
+  padding: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Estilo de cada jugador */
+.matches-page .player-item {
+  background-color: #f8f9fa;
+  padding: 6px 10px; /* Reducido para que sea más compacto */
+  margin-bottom: 6px; /* Separación entre los jugadores */
+  border-radius: 5px;
+  font-size: 14px; /* Tamaño de texto más pequeño */
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center;
+  border: 1px solid #ddd; /* Sutil borde */
+  width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho */
+  box-sizing: border-box; /* Incluir padding y borde en el cálculo del ancho */
+  max-width: 500px; /* Limitar el ancho máximo para no ocupar toda la pantalla */
+  margin: 6px auto; /* Centrado horizontal y separación vertical */
+}
+
+/* Nombre del jugador */
+.matches-page .player-name {
+  font-weight: bold;
+  flex: 3; /* Ocupa más espacio para que se vea claramente */
+  font-size: 12px; /* Reducido para que se vea más compacto */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Información adicional (rendimiento, goles, etc.) */
+.matches-page .player-rendimiento {
+  font-size: 12px;
+  color: #555;
+  flex: 1; /* Ocupa el espacio restante */
+  text-align: right; /* Alineamos la información a la derecha */
+}
+
+/* Barra de desplazamiento para los jugadores */
+.matches-page .team-players::-webkit-scrollbar {
+  width: 6px;
+}
+
+.matches-page .team-players::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+/* Estilos para los botones de acción */
+.match-actions {
+  margin-top: 20px;
+}
+
+.start-match-btn, .end-match-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-match-btn:hover, .end-match-btn:hover {
+  background-color: #218838;
+}
+
+
+
