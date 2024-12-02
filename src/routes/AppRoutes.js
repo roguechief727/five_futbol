@@ -11,6 +11,8 @@ import Home from '../pages/Home/Home'
 import ListaCalificacion from '../pages/ListaCalificacion/ListaCalificacion';
 import DetalleJugador from '../pages/ListaCalificacion/DetalleJugador';
 import MatchHistory from '../pages/MatchHistory/MatchHistory';
+import CreateMatch from '../pages/CreateMatch/CreateMatch';
+import AdminMatch from '../pages/AdminMatch/AdminMatch';
 
 const AppRoutes = () => {
   const { auth } = useContext(AuthContext);
@@ -62,6 +64,23 @@ const AppRoutes = () => {
               element={
                 <MainLayout>
                   <MatchHistory />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/admin/create-match"
+              element={
+                <MainLayout>
+                  <CreateMatch />
+                </MainLayout>
+              }
+            />
+
+            <Route
+              path="/admin/matches"
+              element={
+                <MainLayout>
+                  <AdminMatch />
                 </MainLayout>
               }
             />
