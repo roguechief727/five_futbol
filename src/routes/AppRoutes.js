@@ -14,6 +14,7 @@ import MatchHistory from '../pages/MatchHistory/MatchHistory';
 import ListaPartidos from '../pages/ListaPartidosJugador/ListaPartidosJugador';
 import DetallePartido from '../pages/ListaPartidosJugador/DetallePartido';
 import CriticList from '../pages/ListaDeCriticas/CriticList';
+import ListaJugadores from '../pages/ListaJugadores/ListaJugadores';
 
 const AppRoutes = () => {
   const { auth } = useContext(AuthContext);
@@ -49,7 +50,7 @@ const AppRoutes = () => {
               }
             />
           </>
-        ) : auth.role === 'admin' ? (
+        ) : auth.role === 'administrador' ? (
           <>
             {/* Rutas protegidas para Admin con AdminLayout */}
             <Route
@@ -57,6 +58,14 @@ const AppRoutes = () => {
               element={
                 <MainLayout>
                   <Admin />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/admin/lista-jugadores"
+              element={
+                <MainLayout>
+                  <ListaJugadores />
                 </MainLayout>
               }
             />

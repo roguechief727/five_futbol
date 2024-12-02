@@ -11,8 +11,10 @@ const Login = () => {
 
   // Función para manejar el login exitoso
   const handleLoginSuccess = ({ token, role }) => {
+    console.log('Token:', token);
     login(token, role);
-    navigate(role === 'admin' ? '/admin' : '/player');
+    console.log('Role:', role);
+    navigate(role === 'administrador' ? '/admin' : '/player');
   };
 
   // Función para manejar la navegación hacia la pestaña anterior

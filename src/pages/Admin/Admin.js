@@ -17,6 +17,10 @@ const Admin = () => {
     navigate('/admin/match-history'); // Redirige a la ruta /register
 };
 
+const handleListClick = () => {
+  navigate('/admin/lista-jugadores'); 
+};
+
   return (
     <div className="admin-page">
       <h2 className="admin-title">Panel de Administración</h2>
@@ -31,7 +35,7 @@ const Admin = () => {
         <div className="option-card">
           <h3 className="option-title">Gestionar Jugadores</h3>
           <p className="option-description">Añade, edita o elimina jugadores de la lista.</p>
-          <button className="option-button">Gestionar</button>
+          <button className="option-button" onClick={ handleListClick }>Gestionar</button>
         </div>
 
         <div className="option-card">
@@ -39,6 +43,7 @@ const Admin = () => {
           <p className="option-description">Consulta los registros de partidos pasados.</p>
           <button className="option-button" onClick={ handleHistoryClick }>Ver Historial</button>
         </div>
+        
       </div>
 
       <div className="logout-container">

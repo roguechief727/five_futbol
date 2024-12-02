@@ -8,25 +8,43 @@ const AuthForm = ({ isLogin, onSuccess }) => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false); // Agregado para manejar el estado de carga
 
+  const API_URL = 'http://localhost:3001/api/routes/auth';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // Iniciar carga
     try {
-      if (isLogin) {
-        const data = await login(username, password);
-        onSuccess(data);
-      } else {
-        await register({ username, password });
-        alert('Usuario registrado. Ahora puedes iniciar sesión.');
+      const endpoint = isLogin ? `${API_URL}/login` : `${API_URL}/register`;
+      const method = isLogin ? 'POST' : 'POST';
+      const body = JSON.stringify({ username, password });
+
+      const response = await fetch(endpoint, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body,
+      });
+
+      if (!response.ok) {
+        const errorMessage = isLogin
+          ? 'Error al iniciar sesión: Credenciales incorrectas.'
+          : 'Error al registrar usuario.';
+        throw new Error(errorMessage);
       }
-      setLoading(false); // Finalizar carga
+
+      const data = await response.json();
+      console.log('Token:', data.token);
+      if (isLogin) {
+        // Llama a la función de éxito si el login es exitoso
+        onSuccess(data); // `data` debe contener el token y el rol
+      } else {
+        alert('Usuario registrado exitosamente. Ahora puedes iniciar sesión.');
+      }
     } catch (err) {
-      setLoading(false); // Finalizar carga
-      if (isLogin) {
-        setError('Credenciales incorrectas. Intenta de nuevo.');
-      } else {
-        setError(err.response?.data?.message || 'Error desconocido');
-      }
+      setError(err.message);
+    } finally {
+      setLoading(false); // Termina el estado de carga
     }
   };
 
