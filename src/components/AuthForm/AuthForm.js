@@ -14,7 +14,7 @@ const AuthForm = ({ isLogin, onSuccess }) => {
     e.preventDefault();
     setLoading(true); // Iniciar carga
     try {
-      const endpoint = isLogin ? `${API_URL}/login` : `${API_URL}/register`;
+      const endpoint = `${API_URL}/login`;
       const method = isLogin ? 'POST' : 'POST';
       const body = JSON.stringify({ username, password });
 
