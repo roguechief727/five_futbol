@@ -13,6 +13,9 @@ import DetalleJugador from '../pages/ListaCalificacion/DetalleJugador';
 import MatchHistory from '../pages/MatchHistory/MatchHistory';
 import CreateMatch from '../pages/CreateMatch/CreateMatch';
 import AdminMatch from '../pages/AdminMatch/AdminMatch';
+import ListaPartidos from '../pages/ListaPartidosJugador/ListaPartidosJugador';
+import DetallePartido from '../pages/ListaPartidosJugador/DetallePartido';
+import CriticList from '../pages/ListaDeCriticas/CriticList';
 
 const AppRoutes = () => {
   const { auth } = useContext(AuthContext);
@@ -109,6 +112,30 @@ const AppRoutes = () => {
               element={
                 <MainLayout>
                   <DetalleJugador />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/partidos"
+              element={
+                <MainLayout>
+                  <ListaPartidos />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/partidos/:id"
+              element={
+                <MainLayout>
+                  <DetallePartido />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/Criticas"
+              element={
+                <MainLayout>
+                  <CriticList />
                 </MainLayout>
               }
             />

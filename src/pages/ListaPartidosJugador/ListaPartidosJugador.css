@@ -1,0 +1,45 @@
+.lista-partidos-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lista-partidos-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .lista-partidos-lista {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lista-partidos-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .lista-partidos-info {
+    flex: 1;
+  }
+  
+  .lista-partidos-boton {
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .lista-partidos-boton:hover {
+    background: #0056b3;
+  }
+  

@@ -1,0 +1,40 @@
+.critic-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .critic-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .critic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .critic-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .critic-author {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  .critic-content {
+    font-size: 1.2em;
+    color: #444;
+    line-height: 1.6;
+  }
+  

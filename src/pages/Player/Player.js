@@ -9,6 +9,14 @@ const Player = () => {
     navigate(`/jugadores`);
   };
 
+  const Partidos = () => {
+    navigate(`/partidos`);
+  };
+
+  const Criticas = () => {
+    navigate(`/criticas`);
+  };
+
   return (
     <div className="player-page">
       <div className="player-container">
@@ -16,13 +24,13 @@ const Player = () => {
 
         <div className="player-options">
           <div className="player-option">
-            <button className="option-button">Ver mis Partidos</button>
+            <button className="option-button" onClick={Partidos}>Ver mis Partidos</button>
           </div>
           <div className="player-option">
             <button className="option-button" onClick={Calificacion}>Calificar un Jugador</button>
           </div>
           <div className="player-option">
-            <button className="option-button">Revisar mis Críticas</button>
+            <button className="option-button" onClick={Criticas}>Revisar mis Críticas</button>
           </div>
           <div className="player-option">
             <button className="option-button">Configurar Notificaciones</button>
